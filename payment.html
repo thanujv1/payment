@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with Payment Option</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to Our Website</h1>
+        <p>Click the button below to make a payment using UPI.</p>
+        <form action="upi://pay" method="get">
+            <!-- UPI Payment Details -->
+            <input type="hidden" name="pa" value="your-upi-6364888926@ybl">
+            <input type="hidden" name="pn" value="Your Name">
+            <input type="hidden" name="mc" value="">
+            <input type="hidden" name="tid" value="">
+            <input type="hidden" name="tr" value="">
+            <input type="hidden" name="tn" value="Payment for Sample Item">
+            <input type="hidden" name="am" value="20.00">
+            <input type="hidden" name="cu" value="INR">
+            <button type="submit" class="button">Pay ₹20.00</button>
+        </form>
+    </div>
+</body>
+
+</html>
